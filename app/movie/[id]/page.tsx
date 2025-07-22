@@ -99,7 +99,7 @@ const MovieDetailPage = ({ params }: MovieDetailPageProps) => {
 
     let userResponse: any;
     try {
-      const userResponse = await api(`/users/preferences?user_id=${userId}`, {
+      userResponse = await api(`/users/preferences?user_id=${userId}`, {
         method: "GET",
       });
     } catch (error) {
